@@ -11,7 +11,20 @@
             </a>
         </li>
         <hr>
+        {{-- <li class="nav-item">
+            <a href="{{ route('agent.location.store') }}" id="trackLink" class="nav-link link-light fs-5 fw-bold d-flex align-items-center"  data-store-url="">
+                <i class="fas fa-location-arrow me-2"></i> Start Tracking
+            </a>
+        </li> --}}
+         <li class="nav-item"></li>
+        <a href="#" id="trackLink"
+   data-store-url="{{ route('agent.location.store') }}"
+   class="btn btn-primary">
+   <i class="fas fa-location-arrow me-2"></i> Start Tracking
+</a>
+</li>
 
+        <hr>
         <!-- Call Logs Section -->
         <li class="nav-item">
             <a href="{{ route('agent.callLogs') }}" class="nav-link link-light fs-5 fw-bold d-flex align-items-center">

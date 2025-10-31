@@ -28,6 +28,10 @@ class Agent extends Authenticatable
     return $this->belongsTo(Company::class);
     }
 
+    public function locations()
+    {
+    return $this->hasMany(AgentLocation::class, 'agent_id');
+    }
 
     public function routeNotificationFor($driver)
     {

@@ -15,6 +15,7 @@ use App\Http\Controllers\Agent\Auth\ResetPasswordController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\AdminTransactionController;
 use App\Http\Middleware\AgentAuth;
+use App\Http\Controllers\AgentLocationController;
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');
 Route::get('/', function () {
@@ -96,6 +97,9 @@ Route::prefix('agent')->group(function () {
         Route::get('agents/leads/create', [AgentLeadController::class, 'create'])->name('agent.create.lead');
         Route::post('agents/leads/store', [AgentLeadController::class, 'store'])->name('agent.store.lead');
 
+        Route::post('/location', [AgentLocationController::class, 'store'])->name('agent.location.store');
+    // If you let agents read their history:
+        Route::get('/location/history', [AgentLocationController::class, 'history']);
     });
 });
 
@@ -105,3 +109,4 @@ Route::get('/transactions/create', [AdminTransactionController::class, 'create']
 Route::post('/transactions/store', [AdminTransactionController::class, 'store'])->name('transactions.store');
 Route::get('/transactions/get-lead-balance/{id}', [AdminTransactionController::class, 'getLeadBalance']);
 
+// Route::post('/agent/location', [AgentLocationController::class, 'store'])->name('agent.location.store');

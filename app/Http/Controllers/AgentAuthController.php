@@ -35,14 +35,17 @@ class AgentAuthController extends Controller
 
     // Now attempt login
     if (Auth::guard('agent')->attempt($request->only('email', 'password'))) {
-        return redirect()->intended('/agent/dashboard');
+    session(['agent_id' => Auth::guard('agent')->id()]);
+    return redirect()->intended('/agent/dashboard');
     }
+
         return back()->withErrors(['email' => 'Invalid credentials.']);
     }
 
     public function logout()
     {
         Auth::guard('agent')->logout();
+        session()->forget('agent_id');
         return redirect('/agent/login');
     }
 }
