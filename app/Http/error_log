@@ -1,0 +1,48 @@
+[12-Jul-2025 10:05:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7
+[12-Jul-2025 20:24:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7
+[12-Jul-2025 20:54:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7
+[12-Jul-2025 21:23:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7
+[12-Jul-2025 21:55:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7
+[12-Jul-2025 22:29:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7
+[13-Jul-2025 07:38:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7
+[19-Jul-2025 18:02:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7
+[19-Jul-2025 18:28:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7
+[19-Jul-2025 19:04:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7
+[19-Jul-2025 19:33:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7
+[19-Jul-2025 20:08:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Kernel" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Kernel.php on line 7

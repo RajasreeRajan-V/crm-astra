@@ -1,0 +1,116 @@
+[12-Jul-2025 10:05:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/BalanceUpdateLog.php:6
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/BalanceUpdateLog.php on line 6
+[12-Jul-2025 10:05:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/AgentTracking.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/AgentTracking.php on line 8
+[12-Jul-2025 10:09:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Company.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Company.php on line 7
+[12-Jul-2025 10:10:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/BalanceUpdateLog.php:6
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/BalanceUpdateLog.php on line 6
+[12-Jul-2025 10:14:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/User.php on line 10
+[12-Jul-2025 10:15:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Lead.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Lead.php on line 8
+[12-Jul-2025 10:30:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/CallLog.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/CallLog.php on line 7
+[12-Jul-2025 10:36:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Agent.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Agent.php on line 10
+[13-Jul-2025 09:51:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/BalanceUpdateLog.php:6
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/BalanceUpdateLog.php on line 6
+[13-Jul-2025 09:52:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/AgentTracking.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/AgentTracking.php on line 8
+[13-Jul-2025 09:53:09 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Company.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Company.php on line 7
+[13-Jul-2025 09:54:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Lead.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Lead.php on line 8
+[13-Jul-2025 09:55:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/User.php on line 10
+[13-Jul-2025 09:59:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/CallLog.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/CallLog.php on line 7
+[13-Jul-2025 10:02:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Agent.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Agent.php on line 10
+[13-Jul-2025 10:21:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/BalanceUpdateLog.php:6
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/BalanceUpdateLog.php on line 6
+[13-Jul-2025 10:22:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/AgentTracking.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/AgentTracking.php on line 8
+[13-Jul-2025 10:23:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Company.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Company.php on line 7
+[13-Jul-2025 10:24:27 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/User.php on line 10
+[13-Jul-2025 10:25:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Lead.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Lead.php on line 8
+[13-Jul-2025 10:26:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/CallLog.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/CallLog.php on line 7
+[13-Jul-2025 10:29:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Agent.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Agent.php on line 10
+[13-Jul-2025 10:37:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/BalanceUpdateLog.php:6
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/BalanceUpdateLog.php on line 6
+[13-Jul-2025 10:38:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/AgentTracking.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/AgentTracking.php on line 8
+[13-Jul-2025 10:39:09 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Company.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Company.php on line 7
+[13-Jul-2025 10:40:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/User.php on line 10
+[13-Jul-2025 10:41:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Lead.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Lead.php on line 8
+[13-Jul-2025 10:42:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/CallLog.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/CallLog.php on line 7
+[13-Jul-2025 10:43:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Agent.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Models/Agent.php on line 10

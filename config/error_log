@@ -1,0 +1,60 @@
+[20-May-2025 04:42:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/services.php on line 18
+[24-Jun-2025 14:03:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/services.php on line 18
+[24-Jun-2025 18:33:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/auth.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/auth.php on line 17
+[24-Jun-2025 18:34:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/queue.php on line 16
+[24-Jun-2025 18:49:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/filesystems.php on line 16
+[24-Jun-2025 19:09:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/cache.php on line 18
+[24-Jun-2025 19:09:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/mail.php on line 17
+[24-Jun-2025 19:09:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/database.php on line 19
+[27-Jun-2025 02:40:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/auth.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/auth.php on line 17
+[27-Jun-2025 02:41:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/queue.php on line 16
+[27-Jun-2025 03:07:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/filesystems.php on line 16
+[27-Jun-2025 03:32:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/mail.php on line 17
+[27-Jun-2025 03:32:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/cache.php on line 18
+[27-Jun-2025 03:32:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/services.php on line 18
+[27-Jun-2025 03:33:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/config/database.php on line 19

@@ -1,0 +1,12 @@
+[12-Jul-2025 10:06:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Providers/AppServiceProvider.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Providers/AppServiceProvider.php on line 7
+[13-Jul-2025 03:29:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Providers/AppServiceProvider.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Providers/AppServiceProvider.php on line 7
+[13-Jul-2025 04:07:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Providers/AppServiceProvider.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Providers/AppServiceProvider.php on line 7

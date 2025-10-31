@@ -1,0 +1,8 @@
+[24-Jun-2025 18:47:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/astradevelops/shabin.astradevelops.in/telecall_crm/bootstrap/app.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/bootstrap/app.php on line 8
+[27-Jun-2025 02:54:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/astradevelops/shabin.astradevelops.in/telecall_crm/bootstrap/app.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/astradevelops/shabin.astradevelops.in/telecall_crm/bootstrap/app.php on line 8

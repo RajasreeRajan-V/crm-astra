@@ -1,0 +1,28 @@
+[13-Jul-2025 01:56:24 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ResetPasswordController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ResetPasswordController.php on line 10
+[13-Jul-2025 02:07:19 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ForgotPasswordController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ForgotPasswordController.php on line 9
+[15-Jul-2025 02:12:55 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ResetPasswordController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ResetPasswordController.php on line 10
+[15-Jul-2025 02:14:00 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ForgotPasswordController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ForgotPasswordController.php on line 9
+[15-Jul-2025 02:22:58 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ResetPasswordController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ResetPasswordController.php on line 10
+[15-Jul-2025 03:58:06 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ForgotPasswordController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ForgotPasswordController.php on line 9
+[15-Jul-2025 03:58:29 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ResetPasswordController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/astradevelops/public_html/shabin.astradevelops.in/telecall_crm/app/Http/Controllers/Agent/Auth/ResetPasswordController.php on line 10
