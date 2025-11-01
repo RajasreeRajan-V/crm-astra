@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('agent_locations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('agent_id'); // assumes you have agents table
-            $table->decimal('latitude', 10, 7);
-            $table->decimal('longitude', 10, 7);
+            $table->text('latitude');
+            $table->text('longitude');
             $table->string('accuracy')->nullable(); // optional: accuracy in meters
             $table->timestamp('location_time')->useCurrent();
-            $table->string('user_agent')->nullable();
+            $table->text('user_agent')->nullable();
             $table->ipAddress('ip')->nullable();
             $table->timestamps();
             $table->index('agent_id');

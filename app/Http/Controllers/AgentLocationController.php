@@ -8,7 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\AgentAuth;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Crypt;
 class AgentLocationController extends Controller
 {
     /**
@@ -16,7 +16,7 @@ class AgentLocationController extends Controller
      */
     public function index()
     {
-        //
+       return view('agents.track_agent');
     }
 
     /**
@@ -34,14 +34,12 @@ class AgentLocationController extends Controller
     public function store(Request $request)
     {
         // Validate input
-        // dd($request->all());
         $data = $request->validate([
             'latitude' => 'required',
             'longitude' => 'required',
             'accuracy' => 'nullable',
             'location_time' => 'nullable'
         ]);
-        // dd($data);
         // Use authenticated agent ID; fallback for testing
 
         $locationTime = isset($data['location_time'])
@@ -49,18 +47,18 @@ class AgentLocationController extends Controller
         : Carbon::now()->format('Y-m-d H:i:s');
         $agentId = session('agent_id');
 
-    $location = AgentLocation::create([
+        $location = AgentLocation::create([
         'agent_id' => $agentId,
-        'latitude' => $data['latitude'],
-        'longitude' => $data['longitude'],
+        'latitude' => Crypt::encryptString($data['latitude']),
+        'longitude' => Crypt::encryptString($data['longitude']),
         'accuracy' => $data['accuracy'] ?? null,
-        'location_time' => $locationTime,
-        'user_agent' => $request->header('User-Agent'),
+        'location_time' => now(),
+        'user_agent' => Crypt::encryptString($request->header('User-Agent') ?? 'unknown'),
         'ip' => $request->ip(),
     ]);
-
+    // session(['last_location_id' => $location->id]);
     return response()->json(['success' => true, 'location' => $location], 201);
-} 
+    } 
 
     
 
@@ -110,11 +108,23 @@ class AgentLocationController extends Controller
             ->select(
                 'al.*',
                 'a.name as agent_name',
-                'a.phone as agent_phone'
+                'a.phone_no as agent_phone'
             )
             ->get();
 
-        return response()->json($latest);
+        $latest = $latest->map(function ($item) {
+            try {
+                $item->latitude = Crypt::decryptString($item->latitude);
+                $item->longitude = Crypt::decryptString($item->longitude);
+            } catch (\Exception $e) {
+                // If decryption fails, fallback to 0
+                $item->latitude = 0;
+                $item->longitude = 0;
+            }
+            return $item;
+        });
+
+    return response()->json($latest);
     }
 
     public function history($agentId)

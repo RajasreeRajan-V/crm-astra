@@ -120,6 +120,7 @@
 
 <!-- Chart.js Library -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
 <script src="{{ asset('js/agent-tracker.js') }}"></script>
 <meta name="csrf-token" content="{{ csrf_token() }}">
 

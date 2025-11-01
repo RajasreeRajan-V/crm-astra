@@ -49,6 +49,9 @@
             <a href="{{ route('callLogs.index') }}" class="nav-link link-light">Call Logs</a>
         </li>
         <li class="nav-item ms-3">
+            <a href="{{ route('track.agent') }}" class="nav-link link-light">Track Agent</a>
+        </li>
+        <li class="nav-item ms-3">
             <a href="{{ route('transactions.index') }}" class="nav-link link-light">Transactions</a>
         </li>
     </ul>

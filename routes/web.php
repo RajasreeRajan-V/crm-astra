@@ -109,4 +109,7 @@ Route::get('/transactions/create', [AdminTransactionController::class, 'create']
 Route::post('/transactions/store', [AdminTransactionController::class, 'store'])->name('transactions.store');
 Route::get('/transactions/get-lead-balance/{id}', [AdminTransactionController::class, 'getLeadBalance']);
 
-// Route::post('/agent/location', [AgentLocationController::class, 'store'])->name('agent.location.store');
+Route::get('/admin-agent', [AgentLocationController::class, 'index'])->name('track.agent');
+ Route::get('/admin/agents/locations/latest', [AgentLocationController::class, 'latestAll']);
+    Route::get('/admin/agents/{agent}/locations', [AgentLocationController::class, 'history']);
+    Route::view('/admin/agents/map', 'admin.agents_map')->name('admin.agents.map');
