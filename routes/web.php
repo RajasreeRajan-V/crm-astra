@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AgentController;
@@ -28,6 +27,10 @@ Route::post('/leads', [LeadController::class, 'store'])->name('leads.store');
 Route::get('/leads/create', [LeadController::class, 'create'])->name('leads.create')->middleware('auth');
 Route::get('/leads/transfer', [LeadController::class, 'transfer'])->name('leads.transfer')->middleware('auth');
 Route::post('/leads/transfer', [LeadController::class, 'storeTransfer'])->name('leads.transfer.store')->middleware('auth');
+
+//agent location routes in admin dashboard
+Route::get('/admin-agent', [AgentLocationController::class, 'index'])->name('track.agent');
+Route::get('/admin/agents/locations/latest', [AgentLocationController::class, 'latestAll']);
 
 // Agents routes
 Route::get('/agents', [AgentController::class, 'index'])->name('agents.index')->middleware('auth');
@@ -109,7 +112,6 @@ Route::get('/transactions/create', [AdminTransactionController::class, 'create']
 Route::post('/transactions/store', [AdminTransactionController::class, 'store'])->name('transactions.store');
 Route::get('/transactions/get-lead-balance/{id}', [AdminTransactionController::class, 'getLeadBalance']);
 
-Route::get('/admin-agent', [AgentLocationController::class, 'index'])->name('track.agent');
- Route::get('/admin/agents/locations/latest', [AgentLocationController::class, 'latestAll']);
+
     // Route::get('/admin/agents/{agent}/locations', [AgentLocationController::class, 'history']);
     // Route::view('/admin/agents/map', 'admin.agents_map')->name('admin.agents.map');

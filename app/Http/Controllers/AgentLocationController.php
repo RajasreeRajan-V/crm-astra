@@ -31,23 +31,18 @@ class AgentLocationController extends Controller
      * Store a newly created resource in storage.
      */
     // Agents must be authenticated as agents (adjust guard as required)
-    public function store(Request $request)
-    {
-        // Validate input
-        $data = $request->validate([
-            'latitude' => 'required',
-            'longitude' => 'required',
-            'accuracy' => 'nullable',
-            'location_time' => 'nullable'
-        ]);
-        // Use authenticated agent ID; fallback for testing
+  public function store(Request $request)
+{
+    $data = $request->validate([
+        'latitude' => 'required',
+        'longitude' => 'required',
+        'accuracy' => 'nullable',
+        'location_time' => 'nullable'
+    ]);
 
-        $locationTime = isset($data['location_time'])
-        ? Carbon::parse($data['location_time'])->format('Y-m-d H:i:s')
-        : Carbon::now()->format('Y-m-d H:i:s');
-        $agentId = session('agent_id');
+    $agentId = session('agent_id'); // or Auth::guard('agent')->id();
 
-        $location = AgentLocation::create([
+     AgentLocation::create([
         'agent_id' => $agentId,
         'latitude' => Crypt::encryptString($data['latitude']),
         'longitude' => Crypt::encryptString($data['longitude']),
@@ -56,9 +51,21 @@ class AgentLocationController extends Controller
         'user_agent' => Crypt::encryptString($request->header('User-Agent') ?? 'unknown'),
         'ip' => $request->ip(),
     ]);
-    // session(['last_location_id' => $location->id]);
-    return response()->json(['success' => true, 'location' => $location], 201);
-    } 
+    AgentLocation::updateOrCreate(
+        ['agent_id' => $agentId, 'is_latest' => true], // Add a new column: `is_latest` boolean
+        [
+            'latitude' => Crypt::encryptString($data['latitude']),
+            'longitude' => Crypt::encryptString($data['longitude']),
+            'accuracy' => $data['accuracy'] ?? null,
+            'location_time' => now(),
+            'user_agent' => Crypt::encryptString($request->header('User-Agent') ?? 'unknown'),
+            'ip' => $request->ip(),
+        ]
+    );
+
+    return response()->json(['success' => true]);
+}
+
 
     
 

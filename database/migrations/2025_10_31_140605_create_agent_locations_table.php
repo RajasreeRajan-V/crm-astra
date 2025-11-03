@@ -22,6 +22,7 @@ return new class extends Migration
             $table->ipAddress('ip')->nullable();
             $table->timestamps();
             $table->index('agent_id');
+            $table->boolean('is_latest')->default(false);
             $table->foreign('agent_id')->references('id')->on('agents')->onDelete('cascade');
         });
     }

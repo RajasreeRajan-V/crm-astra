@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const trackLink = document.getElementById('trackLink');
   if (!trackLink) return;
@@ -7,61 +8,32 @@ document.addEventListener("DOMContentLoaded", () => {
   let sendIntervalId = null;
   let lastPosition = null;
 
-// function sendPosition(lat, lng) {
-//   const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+  //Send location data to server
+  function sendPosition(position) {
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
+    const accuracy = position.coords.accuracy;
+    const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-//   fetch('/agent/location', {   
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//       'X-CSRF-TOKEN': token,
-//     },
-//     body: JSON.stringify({
-//       latitude: lat,
-//       longitude: lng
-//     })
-//   })
-//   .then(response => {
-//     if (!response.ok) {
-//       console.error('Server error:', response.status);
-//       return response.text(); // Debug: see what HTML was returned
-//     }
-//     return response.json();
-//   })
-//   .then(data => {
-//     console.log('Location sent:', data);
-//   })
-//   .catch(error => {
-//     console.error('Failed to send location:', error);
-//   });
-// }
-
-function sendPosition(position) {
-  const lat = position.coords.latitude;
-  const lng = position.coords.longitude;
-  const accuracy = position.coords.accuracy;
-  const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-
-  fetch('/agent/location', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-TOKEN': token,
-    },
-    body: JSON.stringify({
-      latitude: lat,
-      longitude: lng,
-      accuracy: accuracy,
-      location_time: new Date(position.timestamp).toISOString()
+    fetch('/agent/location', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': token,
+      },
+      body: JSON.stringify({
+        latitude: lat,
+        longitude: lng,
+        accuracy: accuracy,
+        location_time: new Date(position.timestamp).toISOString()
+      })
     })
-  })
-  .then(response => response.json())
-  .then(data => console.log('Location sent:', data))
-  .catch(error => console.error('Failed to send location:', error));
-}
+    .then(response => response.json())
+    .then(data => console.log('Location sent:', data))
+    .catch(error => console.error('Failed to send location:', error));
+  }
 
-
-
+  //Start tracking
   function startTracking() {
     if (!navigator.geolocation) {
       alert('Geolocation is not supported by your browser.');
@@ -91,11 +63,11 @@ function sendPosition(position) {
     });
 
     tracking = true;
-    trackLink.textContent = 'Stop Tracking';
-    trackLink.classList.remove('btn-primary');
-    trackLink.classList.add('btn-danger');
+    localStorage.setItem('trackingActive', 'true'); //remember tracking
+    updateButtonUI(true);
   }
 
+  //Stop tracking
   function stopTracking() {
     if (watchId !== null) {
       navigator.geolocation.clearWatch(watchId);
@@ -106,14 +78,35 @@ function sendPosition(position) {
       sendIntervalId = null;
     }
     tracking = false;
-    trackLink.textContent = 'Start Tracking';
-    trackLink.classList.remove('btn-danger');
-    trackLink.classList.add('btn-primary');
+    localStorage.removeItem('trackingActive'); //clear state
+    updateButtonUI(false);
   }
 
+  //Update button UI dynamically
+  function updateButtonUI(isTracking) {
+    if (isTracking) {
+      trackLink.textContent = 'Stop Tracking';
+      trackLink.classList.remove('btn-primary');
+      trackLink.classList.add('btn-danger');
+    } else {
+      trackLink.textContent = 'Start Tracking';
+      trackLink.classList.remove('btn-danger');
+      trackLink.classList.add('btn-primary');
+    }
+  }
+
+  //Restore state on page load
+  if (localStorage.getItem('trackingActive') === 'true') {
+    startTracking();
+  } else {
+    updateButtonUI(false);
+  }
+
+  //Handle button click
   trackLink.addEventListener('click', (e) => {
     e.preventDefault();
     if (tracking) stopTracking();
     else startTracking();
   });
 });
+
