@@ -3,6 +3,7 @@
 @section('title', 'Agent Tracking Dashboard')
 
 @section('content')
+<br>
 <h2>Agent Tracking Dashboard</h2>
 
 <table id="agentTable" class="table table-bordered table-striped mt-3">

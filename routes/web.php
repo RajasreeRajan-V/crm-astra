@@ -111,5 +111,5 @@ Route::get('/transactions/get-lead-balance/{id}', [AdminTransactionController::c
 
 Route::get('/admin-agent', [AgentLocationController::class, 'index'])->name('track.agent');
  Route::get('/admin/agents/locations/latest', [AgentLocationController::class, 'latestAll']);
-    Route::get('/admin/agents/{agent}/locations', [AgentLocationController::class, 'history']);
-    Route::view('/admin/agents/map', 'admin.agents_map')->name('admin.agents.map');
+    // Route::get('/admin/agents/{agent}/locations', [AgentLocationController::class, 'history']);
+    // Route::view('/admin/agents/map', 'admin.agents_map')->name('admin.agents.map');
