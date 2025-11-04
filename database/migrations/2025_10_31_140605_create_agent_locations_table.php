@@ -14,15 +14,16 @@ return new class extends Migration
         Schema::create('agent_locations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('agent_id'); // assumes you have agents table
-            $table->text('latitude');
-            $table->text('longitude');
+            $table->text('latitude')->nullable();;
+            $table->text('longitude')->nullable();;
             $table->string('accuracy')->nullable(); // optional: accuracy in meters
             $table->timestamp('location_time')->useCurrent();
             $table->text('user_agent')->nullable();
-            $table->ipAddress('ip')->nullable();
+            $table->text('ip')->nullable();
             $table->timestamps();
             $table->index('agent_id');
             $table->boolean('is_latest')->default(false);
+            $table->string('tracking_status')->nullable();
             $table->foreign('agent_id')->references('id')->on('agents')->onDelete('cascade');
         });
     }

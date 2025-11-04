@@ -15,6 +15,7 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\AdminTransactionController;
 use App\Http\Middleware\AgentAuth;
 use App\Http\Controllers\AgentLocationController;
+use App\Http\Controllers\AdminLocationController;
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');
 Route::get('/', function () {
@@ -30,7 +31,10 @@ Route::post('/leads/transfer', [LeadController::class, 'storeTransfer'])->name('
 
 //agent location routes in admin dashboard
 Route::get('/admin-agent', [AgentLocationController::class, 'index'])->name('track.agent');
-Route::get('/admin/agents/locations/latest', [AgentLocationController::class, 'latestAll']);
+
+Route::get('/admin/agents/locations/latest', [AdminLocationController::class, 'getLatestLocations']);
+Route::get('/admin/agents/location/{agentId}', [AdminLocationController::class, 'getAgentLocation']);
+
 
 // Agents routes
 Route::get('/agents', [AgentController::class, 'index'])->name('agents.index')->middleware('auth');

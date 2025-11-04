@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\AgentAuth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Log;
+
 class AgentLocationController extends Controller
 {
     /**
@@ -31,43 +33,75 @@ class AgentLocationController extends Controller
      * Store a newly created resource in storage.
      */
     // Agents must be authenticated as agents (adjust guard as required)
-  public function store(Request $request)
-{
+    public function store(Request $request)
+    {
     $data = $request->validate([
-        'latitude' => 'required',
-        'longitude' => 'required',
+        'latitude' => 'nullable',
+        'longitude' => 'nullable',
         'accuracy' => 'nullable',
-        'location_time' => 'nullable'
+        'location_time' => 'nullable',
+        'tracking_status' => 'nullable|string'
     ]);
 
-    $agentId = session('agent_id'); // or Auth::guard('agent')->id();
+    $agentId = session('agent_id'); // or Auth::guard('agent')->id()
+    $status = $request->input('tracking_status') ?? 'inactive';
 
-     AgentLocation::create([
+    Log::info('Incoming Location', [
+    'agent_id' => $agentId,
+    'data' => $request->all()
+    ]);
+
+    // Get last latest location, even if 'is_latest' flag wasn’t set properly
+    $lastLatest = AgentLocation::where('agent_id', $agentId)
+        ->orderByDesc('location_time')
+        ->first();
+
+    //  Use new coordinates if available; otherwise reuse old ones
+    if (isset($data['latitude']) && isset($data['longitude']) && $data['latitude'] !== null && $data['longitude'] !== null) {
+        $encryptedLatitude = Crypt::encryptString($data['latitude']);
+        $encryptedLongitude = Crypt::encryptString($data['longitude']);
+    } elseif ($lastLatest) {
+        $encryptedLatitude = $lastLatest->latitude;
+        $encryptedLongitude = $lastLatest->longitude;
+    } else {
+        $encryptedLatitude = null;
+        $encryptedLongitude = null;
+    }
+
+    $encryptedUserAgent = Crypt::encryptString($request->header('User-Agent') ?? 'unknown');
+    $encryptedIp = Crypt::encryptString($request->ip() ?? 'unknown');
+
+    // Always record full history
+    AgentLocation::create([
         'agent_id' => $agentId,
-        'latitude' => Crypt::encryptString($data['latitude']),
-        'longitude' => Crypt::encryptString($data['longitude']),
+        'latitude' => $encryptedLatitude,
+        'longitude' => $encryptedLongitude,
         'accuracy' => $data['accuracy'] ?? null,
         'location_time' => now(),
-        'user_agent' => Crypt::encryptString($request->header('User-Agent') ?? 'unknown'),
-        'ip' => $request->ip(),
+        'user_agent' => $encryptedUserAgent,
+        'ip' => $encryptedIp,
+        'is_latest' => false,
+        'tracking_status' => $status,
     ]);
+
+    // Update latest location separately
     AgentLocation::updateOrCreate(
-        ['agent_id' => $agentId, 'is_latest' => true], // Add a new column: `is_latest` boolean
+        ['agent_id' => $agentId],
         [
-            'latitude' => Crypt::encryptString($data['latitude']),
-            'longitude' => Crypt::encryptString($data['longitude']),
+            'latitude' => $encryptedLatitude,
+            'longitude' => $encryptedLongitude,
             'accuracy' => $data['accuracy'] ?? null,
             'location_time' => now(),
-            'user_agent' => Crypt::encryptString($request->header('User-Agent') ?? 'unknown'),
-            'ip' => $request->ip(),
+            'user_agent' => $encryptedUserAgent,
+            'ip' => $encryptedIp,
+            'tracking_status' => $status,
+            'is_latest' => true,
         ]
     );
 
-    return response()->json(['success' => true]);
-}
-
-
-    
+    return response()->json(['success' => true, 'status' => $status]);
+    }
+ 
 
     /**
      * Display the specified resource.
@@ -119,17 +153,18 @@ class AgentLocationController extends Controller
             )
             ->get();
 
-        $latest = $latest->map(function ($item) {
-            try {
-                $item->latitude = Crypt::decryptString($item->latitude);
-                $item->longitude = Crypt::decryptString($item->longitude);
-            } catch (\Exception $e) {
-                // If decryption fails, fallback to 0
-                $item->latitude = 0;
-                $item->longitude = 0;
-            }
-            return $item;
-        });
+       $latest = $latest->map(function ($item) {
+        try {
+            $item->latitude = Crypt::decryptString($item->latitude);
+            $item->longitude = Crypt::decryptString($item->longitude);
+            $item->ip = Crypt::decryptString($item->ip); 
+        } catch (\Exception $e) {
+            $item->latitude = 0;
+            $item->longitude = 0;
+            $item->ip = 'unknown';
+        }
+        return $item;
+    });
 
     return response()->json($latest);
     }

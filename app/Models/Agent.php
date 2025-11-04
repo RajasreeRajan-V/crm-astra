@@ -32,7 +32,11 @@ class Agent extends Authenticatable
     {
     return $this->hasMany(AgentLocation::class, 'agent_id');
     }
-
+    public function latestLocation()
+    {
+    return $this->hasOne(AgentLocation::class, 'agent_id')
+        ->latestOfMany(); 
+    }
     public function routeNotificationFor($driver)
     {
         if ($driver === 'mail') {
